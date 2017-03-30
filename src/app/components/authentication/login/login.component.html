@@ -1,0 +1,52 @@
+<div>
+  <h1 class="text-center small-desc">Log In</h1>
+  <form #userForm="ngForm" (ngSubmit)="submit()">
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+        <input type="email"
+               class="form-control"
+               placeholder="Email"
+               name="username"
+               [(ngModel)]="userData.firstname"
+               required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+        <!--TODO figure out why the 'password' type throws an invalid-->
+        <input type="password"
+               class="form-control"
+               placeholder="Password"
+               name="userpass"
+               [(ngModel)]="userData.password"
+               required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button type="submit"
+              [disabled]="!userForm.form.valid"
+              class="btn cp-button-primary btn-block"
+              *ngIf="!callInProgress">Log In</button>
+      <button type="submit"
+              [disabled]="true"
+              class="btn cp-button-primary btn-block"
+              *ngIf="callInProgress">Sending...</button>
+    </div>
+  </form>
+
+  <div class="alert-info" *ngIf="callInProgress">Sending will not actually do anything as this is just a starter template :-P</div>
+
+  <p class="text-uppercase text-center">
+    <small>
+      <a [routerLink]="['/auth/forgot-password']">Forgot Your Password?</a>
+    </small>
+  </p>
+</div>
+
+
+
+
