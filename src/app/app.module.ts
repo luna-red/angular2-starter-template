@@ -13,13 +13,14 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 /**
  * Imported module routes
  */
 import { DefaultRoutes } from './app.routes';
 import { AuthenticationModule } from './routes/authentication/auth.module';
-import { WelcomeComponent } from './components/welcome/welcome.component';
+import { MaterialExampleModule } from './routes/material-example/material-example.module';
 
 @NgModule({
   /**
@@ -39,7 +40,8 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
     FormsModule,
     HttpModule,
     RouterModule.forRoot(DefaultRoutes),
-    AuthenticationModule
+    AuthenticationModule,
+    MaterialExampleModule
   ],
   /**
    * services and values known to DI. They are added to the root scope and they are injected to other services or

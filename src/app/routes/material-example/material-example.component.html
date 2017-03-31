@@ -1,0 +1,28 @@
+<button md-icon-button [mdMenuTriggerFor]="menu">
+  <md-icon>list</md-icon>
+  Menu
+</button>
+<md-menu #menu="mdMenu">
+  <button md-menu-item disabled>
+    <md-icon>view_day</md-icon>
+    <a [routerLink]="['/material/card']"><span>Material Card</span></a>
+  </button>
+  <button md-menu-item disabled>
+    <md-icon>view_quilt</md-icon>
+    <a [routerLink]="['/material/gridlist']"><span>Material Gridlist</span></a>
+  </button>
+  <button md-menu-item disabled>
+    <md-icon>view_column</md-icon>
+    <a [routerLink]="['/material/sidenav']"><span>Material Sidenav</span></a>
+  </button>
+  <button md-menu-item disabled>
+    <md-icon>compare_arrows</md-icon>
+    <a [routerLink]="['/material/slider']"><span>Material Slider</span></a>
+  </button>
+  <button md-menu-item disabled>
+    <md-icon>autorenew</md-icon>
+    <a [routerLink]="['/material/spinner']"><span>Material Spinner</span></a>
+  </button>
+</md-menu>
+
+<router-outlet></router-outlet>
