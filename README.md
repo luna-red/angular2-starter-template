@@ -1,5 +1,8 @@
 # Angular 2 Starter Template
 
+## This angular 2 project has several focuses that developers can quickly leverage to get started on a clean application slate within minutes
+## Written By: Luna Red
+
 ## Install Node and NVM
   This link lists out many methodologies for installing Node and NVM
   [Node JS](https://gist.github.com/isaacs/579814)
